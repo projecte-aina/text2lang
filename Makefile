@@ -1,10 +1,10 @@
-VERSION ?= 0.1.1
+VERSION ?= 0.1.2
 
 build:
-	docker build . -t ghcr.io/ccoreilly/text2lang:${VERSION}
+	docker build . -t paulandrei/text2lang:${VERSION}
 
 push: build
-	docker push ghcr.io/ccoreilly/text2lang:${VERSION}
+	docker push paulandrei/text2lang:${VERSION}
 
 deploy:
 	kustomize build k8s | kubectl apply -f -
