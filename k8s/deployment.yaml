@@ -22,7 +22,7 @@ spec:
       - name: github-registry
       containers:
         - name: text2lang
-          image: paulandrei/text2lang:0.1.2
+          image: projecteaina/text2lang:latest
           imagePullPolicy: IfNotPresent
           livenessProbe:
             httpGet:

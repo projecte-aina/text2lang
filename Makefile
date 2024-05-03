@@ -1,10 +1,10 @@
 VERSION ?= 0.1.2
 
 build:
-	docker build . -t paulandrei/text2lang:${VERSION}
+	docker build . -t projecteaina/text2lang:${VERSION}
 
 push: build
-	docker push paulandrei/text2lang:${VERSION}
+	docker push projecteaina/text2lang:${VERSION}
 
 deploy:
 	kustomize build k8s | kubectl apply -f -
